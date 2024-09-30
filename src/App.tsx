@@ -7,13 +7,18 @@ export function App() {
         Welcome to your Kaioken Tauri app!
       </h1>
       <Counter />
-      <div className="flex justify-center">
-        <span className="text-stone-200">
-          Learn at{" "}
-          <a href="https://kaioken.dev" target="_blank" className="underline">
+      <div className="text-center text-stone-200">
+        <p>Learn at</p>
+        <div className="flex gap-4 text-xl w-full justify-center">
+          <a
+            href="https://kaioken.dev"
+            target="_blank"
+            className="font-semibold flex items-center gap-1 w-full justify-center"
+          >
+            <img className="w-5 h-5" src="/favicon.svg" alt="kaioken logo" />
             kaioken.dev
           </a>
-        </span>
+        </div>
       </div>
     </div>
   )
