@@ -13,10 +13,18 @@ export function App() {
           <a
             href="https://kaioken.dev"
             target="_blank"
-            className="font-semibold flex items-center gap-1 w-full justify-center"
+            className="font-semibold flex items-center gap-1 w-full justify-end"
           >
             <img className="w-5 h-5" src="/favicon.svg" alt="kaioken logo" />
             kaioken.dev
+          </a>
+          <a
+            href="https://tauri.app"
+            target="_blank"
+            className="font-semibold flex items-center gap-1 w-full justify-start"
+          >
+            <img className="w-5 h-5" src="/tauri.png" alt="Tauri logo" />
+            tauri.app
           </a>
         </div>
       </div>
