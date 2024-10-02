@@ -17,7 +17,7 @@ export function Counter() {
         iterations: 1,
       }
     )
-  }, [countRef.current])
+  }, [])
 
   return (
     <div className="flex flex-col gap-8 justify-center items-center">
