@@ -1,7 +1,7 @@
 import { useRef, useCallback, useSignal } from "kaioken"
 
 export function Counter() {
-  const count = useSignal(2)
+  const count = useSignal(0)
   const countRef = useRef<HTMLDivElement>(null)
   const animRef = useRef<Animation>()
 
@@ -28,7 +28,7 @@ export function Counter() {
         />
       </button>
       <span ref={countRef} className="text-4xl font-medium select-none">
-        {count} 123
+        {count}
       </span>
     </div>
   )
