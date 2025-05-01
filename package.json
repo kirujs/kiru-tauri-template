@@ -8,7 +8,7 @@
     "build": "tauri build",
     "preview": "start ./src-tauri/target/release/kaioken-tauri-template.exe",
     "dev:vite": "vite",
-    "build:vite": "tsc && vite build",
+    "build:vite": "vite build",
     "preview:vite": "vite preview"
   },
   "devDependencies": {
@@ -19,9 +19,9 @@
     "tailwindcss": "^4.1.3",
     "typescript": "^5.8.3",
     "vite": "^6.2.6",
-    "vite-plugin-kaioken": "0.17.0"
+    "vite-plugin-kaioken": "0.18.0"
   },
   "dependencies": {
-    "kaioken": "0.37.0"
+    "kaioken": "0.38.0"
   }
 }
