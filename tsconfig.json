@@ -19,8 +19,7 @@
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true,
 
-    "jsx": "preserve",
-    "jsxImportSource": "kaioken"
+    "jsx": "preserve"
   },
   "include": ["src"]
 }
