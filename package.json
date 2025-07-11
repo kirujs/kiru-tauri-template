@@ -17,10 +17,10 @@
     "postcss": "^8.5.6",
     "tailwindcss": "^4.1.11",
     "typescript": "^5.8.3",
-    "vite": "^7.0.2",
+    "vite": "^7.0.4",
     "vite-plugin-kaioken": "0.20.5"
   },
   "dependencies": {
-    "kaioken": "0.40.7"
+    "kaioken": "0.41.0"
   }
 }
