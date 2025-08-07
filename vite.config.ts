@@ -1,5 +1,5 @@
 import { defineConfig } from "vite"
-import kaioken from "vite-plugin-kaioken"
+import kiru from "vite-plugin-kiru"
 
 export default defineConfig({
   // prevent vite from obscuring rust errors
@@ -26,5 +26,5 @@ export default defineConfig({
     // produce sourcemaps for debug builds
     sourcemap: !!process.env.TAURI_DEBUG,
   },
-  plugins: [kaioken()],
+  plugins: [kiru()],
 })

@@ -1,3 +1,3 @@
-Welcome to your new Kaioken Tauri project!
+Welcome to your new Kiru Tauri project!
 
-Visit [https://kaioken.dev](https://kaioken.dev) for more information on kaioken, and [https://tauri.app](https://tauri.app) for more information on Tauri.
+Visit [https://kirujs.dev](https://kirujs.dev) for more information on kiru, and [https://tauri.app](https://tauri.app) for more information on Tauri.
