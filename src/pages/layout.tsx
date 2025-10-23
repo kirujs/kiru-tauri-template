@@ -1,12 +1,25 @@
-import { Counter } from "./components/Counter"
+import { Link, useFileRouter } from "kiru/router"
 
-export function App() {
+export default function RootLayout({ children }: { children: JSX.Children }) {
+  const { state } = useFileRouter()
+
   return (
     <div className="min-h-screen flex flex-col gap-20 justify-between px-10 py-20">
       <h1 className="text-3xl md:text-4xl md:leading-normal font-bold text-center">
         Welcome to your Kiru Tauri app!
       </h1>
-      <Counter />
+      <div className="flex gap-4 justify-center">
+        <Link to="/" className={state.path === "/" ? "" : "underline"}>
+          Home
+        </Link>
+        <Link
+          to="/todos"
+          className={state.path === "/todos" ? "" : "underline"}
+        >
+          Todos
+        </Link>
+      </div>
+      {children}
       <div className="text-center text-stone-200">
         <p>Learn at</p>
         <div className="flex gap-4 text-xl w-full justify-center">
