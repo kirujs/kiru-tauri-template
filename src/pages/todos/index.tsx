@@ -1,4 +1,4 @@
-import { signal, computed, For } from "kiru"
+import { signal, computed, For, DevTools } from "kiru"
 import { className as cls } from "kiru/utils"
 
 interface Todo {
@@ -7,6 +7,9 @@ interface Todo {
   completed: boolean
 }
 const todos = signal<Todo[]>([])
+if (import.meta.env.DEV) {
+  DevTools.track(todos, "todos")
+}
 
 function updateTodo(todo: Todo) {
   todos.value = todos.value.map((t) => (t.id === todo.id ? todo : t))
