@@ -1,4 +1,4 @@
-import { Derive, signal, useComputed, useSignal } from "kiru"
+import { signal, computed, For } from "kiru"
 import { className as cls } from "kiru/utils"
 
 interface Todo {
@@ -13,10 +13,11 @@ function updateTodo(todo: Todo) {
 }
 
 export default function TodosPage() {
-  const inputText = useSignal("")
-  const disableSubmit = useComputed(() => !inputText.value.trim())
+  const inputText = signal("")
+  const disableSubmit = computed(() => !inputText.value.trim())
 
-  const handleAddTodo = () => {
+  const handleAddTodo = (e: Kiru.FormEvent) => {
+    e.preventDefault()
     if (disableSubmit.value) return
     todos.value = [
       ...todos.value,
@@ -25,9 +26,9 @@ export default function TodosPage() {
     inputText.value = ""
   }
 
-  return (
+  return () => (
     <div className="flex flex-col gap-8 justify-center items-center">
-      <form onsubmit={(e) => (e.preventDefault(), handleAddTodo())}>
+      <form onsubmit={handleAddTodo}>
         <div className="flex gap-2">
           <input
             type="text"
@@ -45,16 +46,11 @@ export default function TodosPage() {
         </div>
       </form>
       <div>
-        <Derive from={todos}>
-          {(todos) => (
-            <ul className="text-xl flex flex-col gap-2">
-              {todos.length === 0 && <i>No todos</i>}
-              {todos.map((todo) => (
-                <TodoItem key={todo.id} todo={todo} />
-              ))}
-            </ul>
-          )}
-        </Derive>
+        <ul className="text-xl flex flex-col gap-2">
+          <For each={todos} fallback={<i>No todos</i>}>
+            {(todo) => <TodoItem todo={todo} />}
+          </For>
+        </ul>
       </div>
     </div>
   )

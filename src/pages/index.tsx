@@ -1,9 +1,9 @@
-import { useRef, useSignal } from "kiru"
+import { ref, signal } from "kiru"
 
 export default function Page() {
-  const count = useSignal(0)
-  const countRef = useRef<HTMLDivElement>(null)
-  const animRef = useRef<Animation>()
+  const count = signal(0)
+  const countRef = ref<HTMLDivElement>(null)
+  const animRef = ref<Animation>()
 
   const handleClick = () => {
     count.value++
@@ -18,7 +18,7 @@ export default function Page() {
     )
   }
 
-  return (
+  return () => (
     <div className="flex flex-col gap-8 justify-center items-center">
       <button type="button" onclick={handleClick} className="cursor-pointer">
         <img
