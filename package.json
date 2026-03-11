@@ -22,6 +22,6 @@
     "vite-plugin-kiru": "1.2.2"
   },
   "dependencies": {
-    "kiru": "1.3.0"
+    "kiru": "1.3.2"
   }
 }
