@@ -1,5 +1,6 @@
 import { defineConfig } from "vite"
 import kiru from "vite-plugin-kiru"
+import tailwindcss from "@tailwindcss/vite"
 
 export default defineConfig({
   // prevent vite from obscuring rust errors
@@ -26,5 +27,5 @@ export default defineConfig({
     // produce sourcemaps for debug builds
     sourcemap: !!process.env.TAURI_DEBUG,
   },
-  plugins: [kiru()],
+  plugins: [tailwindcss(), kiru()],
 })

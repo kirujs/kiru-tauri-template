@@ -51,7 +51,7 @@ export default function TodosPage() {
       <div>
         <ul className="text-xl flex flex-col gap-2">
           <For each={todos} fallback={<i>No todos</i>}>
-            {(todo) => <TodoItem todo={todo} />}
+            {(todo) => <TodoItem todo={todo} key={todo.id} />}
           </For>
         </ul>
       </div>
